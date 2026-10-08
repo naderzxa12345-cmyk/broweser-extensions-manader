@@ -137,7 +137,9 @@ section h1{
     width: 35px;
 }
 
-
+.card h4{
+    color: hsl(200, 60%, 99%);
+}
 
 .card p{
    color: hsl(200, 60%, 99%);
