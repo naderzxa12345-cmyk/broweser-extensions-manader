@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(227, 75%, 14%);
+    font-family: Arial, sans-serif;
+    
+}
+/* light mood */
+body.light{
+    background: hsl(200, 60%, 99%);
+    color: hsl(226, 25%, 17%);
+}
+body.light .card{
+    background-color: hsl(0, 0%, 100%);
+}
+body.light h4,
+body.light h1{
+    color: hsl(227, 75%, 14%);
+}
+body.light p{
+    color: hsl(226, 11%, 37%);
+}
+/* start header */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 10px 20px;
+    background-color: hsl(225, 23%, 24%);
+    border: 1px solid rgba(255, 28%, 255, 0.08);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0,0, 0.2);
+}
+
+.exten{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+header .logo {
+    width: 41px;
+    height: 41px;
+    object-fit: cover;
+    object-position: left;
+}
+
+.exten span{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.dark button img{
+    background-color: hsl(226, 11%, 37%);
+    border-radius: 10px;
+}
+
+.dark{
+    display: flex;
+    align-items: center;
+}
+/* end header */
+
+/* start Extenstions */
+
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    margin: 50px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttons button{
+    background-color: hsl(226, 11%, 37%);
+    border: none;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    color: hsl(217, 61%, 90%);
+    gap: 10px;
+}
+
+.buttons button.active{
+    background-color: hsl(3, 77%, 44%);
+    transition: 0.5s;
+}
+section h1{
+    color: hsl(200, 60%, 99%);
+}
+/* end Extenstions */
+
+/* start card the data */
+.cards{
+   display: grid;
+   grid-template-columns: repeat(3, 350px);
+   gap: 10px;
+   justify-content: center;
+}
+
+.card{
+    padding: 20px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(225, 23%, 24%);
+    text-align: left;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+.card .car{
+    background-color: hsl(217, 61%, 90%);
+}
+.card-header{
+   display: flex;
+   align-items: center;
+   gap: 15px;
+}
+
+.card-header img{
+    width: 35px;
+}
+
+
+
+.card p{
+   color: hsl(200, 60%, 99%);
+   font-size: 15px;
+   position: relative;
+   left: 40px;
+   
+   
+}
+
+.actions{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: auto;
+}
+
+
+
+.actions .remove{
+    border: none;
+    border: 1px solid hsl(3, 86%, 64%);
+    border-radius: 20px;
+    padding: 8px;
+    background-color: hsl(225, 23%, 24%);
+    color: hsl(200, 60%, 99%);
+}
+
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    position: absolute;
+    inset: 0;
+    background-color: hsl(226, 11%, 37%);
+    border-radius:24px ;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slider::before{
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 3px;
+    top: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.switch input:checked + .slider{
+    background-color: hsl(3, 77%, 44%);
+}
+
+.switch input:checked + .slider::before{
+    transform: translateX(20px);
+}
