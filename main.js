@@ -1,7 +1,7 @@
 let Data = [];
 
 async function DataEx() {
-    let responsive = await fetch('data.json');
+    const responsive = await fetch('data.json');
     Data = await responsive.json();
 
     ShowCards(Data);
@@ -19,7 +19,7 @@ async function DataEx() {
         card.innerHTML = `
         <div class="card-header">
         <img src= "${e.logo}" alt="">
-        <h4>${e.name}</h4>
+        <h2>${e.name}</h2>
         </div>
         
         <p>${e.description}</p>
