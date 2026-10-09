@@ -18,7 +18,7 @@ async function DataEx() {
 
         card.innerHTML = `
         <div class="card-header">
-        <img src= "${e.logo}" alt=""
+        <img src= "${e.logo}" alt="">
         <h4>${e.name}</h4>
         </div>
         
